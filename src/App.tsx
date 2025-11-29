@@ -1,15 +1,14 @@
-import { TooltipProvider } from "@radix-ui/react-tooltip"
-import { ThemeProvider } from "./components/themeprovider"
+import Chat from "./components/Chat/Chat"
 import AppSidebar from "./components/sidebar"
 
 const App = ({children}: {children?: React.ReactNode}) => {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <TooltipProvider>
-        <AppSidebar/>
+      <div className="flex">
+      <AppSidebar/>
       {children}
-      </TooltipProvider>
-    </ThemeProvider>
+      <Chat/>
+      </div>
+
   )
 }
 
